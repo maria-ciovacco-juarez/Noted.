@@ -34,3 +34,28 @@ const readFromFile = async (filePath) => {
     return [];
   }
 };
+
+const writeToFile = async (filePath, content) => {
+  try {
+    await writeFileAsync(filePath, JSON.stringify(content, null, 4));
+    console.info(`Data written to ${filePath}`);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+const readAndAppend = async (filePath, content) => {
+  try {
+    const fileData = await readFromFile(filePath);
+    fileData.push(content);
+    await writeToFile(filePath, fileData);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+app.get('/api/notes', async (req, res) => {
+  console.info(`${req.method} request received for notes`);
+  const notes = await readFromFile('./db/db.json');
+  res.json(notes);
+});
