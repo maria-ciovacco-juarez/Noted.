@@ -1,9 +1,10 @@
-// const express = require('express');
+const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const util = require('util');
 
 const uuid = require('./helpers/uuid');
+
 
 const PORT = 3001;
 
@@ -82,3 +83,5 @@ app.post('/api/notes', async (req, res) => {
 app.listen(process.env.PORT || PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
 );
+
+module.exports = app;
