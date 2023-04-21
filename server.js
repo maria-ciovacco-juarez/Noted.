@@ -59,3 +59,26 @@ app.get('/api/notes', async (req, res) => {
   const notes = await readFromFile('./db/db.json');
   res.json(notes);
 });
+
+app.post('/api/notes', async (req, res) => {
+  console.info(`${req.method} request received to add a new note`);
+
+  const { title, text } = req.body;
+
+  if (title && text) {
+    const newNote = {
+      title,
+      text,
+      id: uuid(),
+    };
+
+    await readAndAppend('./db/db.json', newNote);
+    res.json(newNote);
+  } else {
+    res.status(400).send('Please provide a title and text for your note.');
+  }
+});
+
+app.listen(process.env.PORT || PORT, () =>
+  console.log(`App listening at http://localhost:${PORT}`)
+);
