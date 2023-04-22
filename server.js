@@ -19,7 +19,7 @@ app.get('/notes', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 });
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
@@ -56,6 +56,7 @@ const readAndAppend = async (filePath, content) => {
 };
 
 app.get('/api/notes', async (req, res) => {
+  // res.sendFile(path.join(__dirname, './db/db.json'))
   console.info(`${req.method} request received for notes`);
   const notes = await readFromFile('./db/db.json');
   res.json(notes);
@@ -83,5 +84,7 @@ app.post('/api/notes', async (req, res) => {
 app.listen(process.env.PORT || PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
 );
+
+
 
 module.exports = app;
