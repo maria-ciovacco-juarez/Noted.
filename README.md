@@ -29,9 +29,10 @@ Upon accessing the Notes page the user can type a new Note by adding a title in 
 
  Below are some mock images of the note tracker.
 
- [label](https://courses.bootcampspot.com/courses/2976/files/2428341/preview)
+![11-express-homework-demo-01](https://user-images.githubusercontent.com/119270869/233812220-a6b8ea20-b781-4d8d-af87-f9dcfe9111b5.png)
 
- [label](https://courses.bootcampspot.com/courses/2976/files/2428339/preview)
+![11-express-homework-demo-02](https://user-images.githubusercontent.com/119270869/233812222-e5987582-5d26-4f12-bff1-58f114daecd5.png)
+
 
 
 ## Credits
