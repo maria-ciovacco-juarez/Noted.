@@ -5,7 +5,7 @@
 This assignment was to create a note taking application with the starter code provided. The application is runs in the browser.
 
 ## Usage
-To use this application the user can use this deployed link to access in the broswer and click "Get Started". I recommend using Chrome -->
+To use this application the user can use this deployed heroku link to access in the broswer and click "Get Started". I recommend using Chrome. --> https://noted-note-tracker.herokuapp.com/
 
 The alternative would be to clone this repository into your local computer via the terminal (MacOS) or git bash (Windows). From there one can access the code via VSCode.
 
