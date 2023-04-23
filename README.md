@@ -38,8 +38,11 @@ Upon accessing the Notes page the user can type a new Note by adding a title in 
 ## Credits
 
 -- StackFlow
+
 -- YouTube
+
 -- ChatGpt for syntax errors
+
 -- tutor
 
 ## License
